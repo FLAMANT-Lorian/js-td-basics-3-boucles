@@ -11,24 +11,33 @@
     }
 */
 
-/*
-EXEMPLE 5 :
-- Affichez en boucle une boîte de dialogue dans laquelle vous permettez à l'utilisateur
-  d'entrer une lettre et informez-le qu'il doit saisir "X" pour sortir.
-  Le message pourrait être : "Tapez une lettre ou X pour sortir : ".
-- Utilisez une boucle 'while' pour répéter le processus jusqu'à ce que l'utilisateur entre "X".
-- Pendant chaque itération, affichez une boîte de dialogue pour obtenir une lettre de l'utilisateur et stockez-la dans une variable.
-- Ensuite, vérifiez si la lettre saisie est "X". Si c'est le cas, sortez de la boucle.
-- Sinon, continuez à demander à l'utilisateur de saisir une lettre.
 
-BONUS :
-- Après avoir quitté la boucle, affichez dans la console la chaîne complète saisie par l'utilisateur en concaténant les lettres.
-*/
+// EXEMPLE 5 :
+// - Affichez en boucle une boîte de dialogue dans laquelle vous permettez à l'utilisateur
+//   d'entrer une lettre et informez-le qu'il doit saisir "X" pour sortir.
+//   Le message pourrait être : "Tapez une lettre ou X pour sortir : ".
+// - Utilisez une boucle 'while' pour répéter le processus jusqu'à ce que l'utilisateur entre "X".
+// - Pendant chaque itération, affichez une boîte de dialogue pour obtenir une lettre de l'utilisateur et stockez-la dans une variable.
+// - Ensuite, vérifiez si la lettre saisie est "X". Si c'est le cas, sortez de la boucle.
+// - Sinon, continuez à demander à l'utilisateur de saisir une lettre.
 
+let lettre = prompt("Veuillez saisir la lettre 'X'");
 
+while (lettre !== 'X'){
+    lettre = prompt("Veuillez saisir la lettre 'X'");
+}
 
+// BONUS :
+// - Après avoir quitté la boucle, affichez dans la console la chaîne complète saisie par l'utilisateur en concaténant les lettres.
 
+// // code avec le bonus
 
-// code avec le bonus
+let lettres = prompt("Veuillez saisir la lettre 'X'");
+let concatenation = '';
 
+while (lettres !== 'X'){
+    lettres = prompt("Veuillez saisir la lettre 'X'");
+    concatenation += lettres;
+}
+console.log(`${concatenation}`);
 

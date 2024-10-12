@@ -18,3 +18,32 @@ N.B. Faites-le de deux manières différentes :
 // avec WHILE
 // Répétez le même processus avec une boucle WHILE, en demandant à nouveau la table de multiplication et le nombre de valeurs
 
+/*
+// Avec for
+const table = parseInt(prompt("Quelle table de multiplication souhaitez-vous afficher ? La table de multiplication par"));
+const nbrValeurs = parseInt(prompt("Combien de valeurs souhaitez-vous afficher pour cette table ?"));
+
+if (table && nbrValeurs) {
+    console.log(`Voici les ${nbrValeurs} premières valeurs de la table de multiplication par ${table} :`);
+    for (let i = 1; i <= nbrValeurs; i++) {
+        console.log(i * table);
+    }
+} else {
+    console.log(`Veuillez renseigner des nombres !`);
+}
+*/
+
+// Avec while
+const table = parseInt(prompt("Quelle table de multiplication souhaitez-vous afficher ? La table de multiplication par"));
+const nbrValeurs = parseInt(prompt("Combien de valeurs souhaitez-vous afficher pour cette table ?"));
+let i = 1;
+if (table && nbrValeurs) {
+    console.log(`Voici les ${nbrValeurs} premières valeurs de la table de multiplication par ${table} :`);
+    while (i <= nbrValeurs){
+        console.log(i * table);
+        i++;
+    }
+} else {
+    console.log(`Veuillez renseigner des nombres !`);
+}
+
