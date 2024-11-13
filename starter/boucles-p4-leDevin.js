@@ -20,28 +20,69 @@ Ecrivez un programme qui va deviner le nombre auquel vous avez pensé (voir livr
 */
 // Écrivez le code JavaScript pour résoudre cet exercice en essayant de deviner le nombre auquel l'utilisateur pense.
 
-
-const numberUser = Math.floor(prompt("Pensez très fort à un nombre entier entre 1 et 10 et entrer le içi (je ne regarde pas, c\'est promis !), je vais essayer de le deviner…"));
-let randomNumber = Math.floor(Math.random()*11);
-
-if ((numberUser < 10 && numberUser > 0) && numberUser > randomNumber) {
-    for (randomNumber; randomNumber <= 10; randomNumber++) {
-        if (randomNumber === numberUser) {
-            console.log(`J'ai trouvé, vous pensiez à ${randomNumber} !`);
-            break;
-        } else {
-            console.log(`Ce n'est pas ${randomNumber} !`);
+/*const numberUser = parseInt(prompt('Nombre ?'));
+if (numberUser){
+    if (numberUser > 0 && numberUser < 11){
+        for (let i = 1;i <= 10; i++){
+            if (numberUser === i) {
+                console.log(`J'ai trouvé ! Vous pensiez à ${i}`);
+                break;
+            } else{
+                console.log(`Ce n'est pas ${i}`);
+            }
         }
-    }
-} else if ((numberUser < 10 && numberUser > 0) && numberUser < randomNumber){
-    for (randomNumber; randomNumber >= 0; randomNumber--) {
-        if (randomNumber === numberUser) {
-            console.log(`J'ai trouvé, vous pensiez à ${randomNumber} !`);
-            break;
-        } else {
-            console.log(`Ce n'est pas ${randomNumber} !`);
-        }
+    } else {
+        console.log('Le nombre doit être entre 1 et 10 !');
     }
 } else {
-    console.log(`Veuillez entrer un nombre entre 1 et 10 !`);
+    console.log('Veuillez entrer un nombre !');
+}*/
+
+
+//LES FONCTIONS
+
+// On peut écrire ça (C'est le mieux)
+function sayHello(firstName, lastName){ // dans la parenthèses, c'est le paramètre; l'ordre est super important !
+    console.log(`Bonjour ${firstName} ${lastName} !`);
 }
+sayHello('Lorian', 'Flamant');
+
+//-------------------------------------------------------------------------------------//
+
+/*function sayHello(firstName, lastName){ // dans la parenthèses, c'est le paramètre; l'ordre est super important !
+    return `Bonjour ${firstName} ${lastName} !`;
+    console.log('Bonjour'); // Code non-atteignable car il est après le return !
+}
+sayHello('Lorian', 'Flamant');*/
+
+//-------------------------------------------------------------------------------------//
+
+//Bonne syntaxe des fonctions
+
+
+
+// Arow functions (c'est bien de faire ça, c'est plus court)
+const toto = ()=>{
+    console.log('Bonjour');
+};
+
+toto();
+
+// OU (On évite de faire ça !!)
+/*const sayHello = function(){
+    console.log('Hello World !');
+}
+sayHello();*/
+function isBissextile (year){
+    if (year%4 === 0 && year%100 !== 0) {
+        return true;
+    }
+    if (year%400 === 0){
+        return true;
+    }
+    return false;
+}
+
+const year = parseInt(prompt('Veuillez entrer une année :'));
+console.log(`C'est une année : ${isBissextile(year)}`);
+
